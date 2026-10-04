@@ -3,6 +3,12 @@ import pypdf
 
 st.set_page_config(page_title="Validador de Memorial Descritivo - POP", page_icon="📄", layout="centered")
 
+# Exibe a sua logo no topo do site (substitua 'logo.jpg' pelo nome exato do arquivo que você enviou ao GitHub)
+try:
+    st.image("logo.jpg", width=200)
+except:
+    pass
+
 st.title("📄 Validador de Memorial Descritivo (POP)")
 st.write("Eng. Civil Paulo Henrique Malveira Vasconcelos | Sistema de Conferência Automatizada")
 
@@ -62,5 +68,3 @@ if uploaded_file is not None:
 
     except Exception as e:
         st.error(f"Erro ao processar o arquivo PDF: {str(e)}")
-
-# Mais um arquivo necessário para o site funcionar nos bastidores
